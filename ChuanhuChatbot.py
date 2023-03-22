@@ -259,7 +259,7 @@ with gr.Blocks(
                         show_label=True,
                         placeholder=f"在这里输入API地址...",
                         label="API地址",
-                        value="https://api.openai.com/v1/chat/completions",
+                        value="https://service-edt8w63i-1256213455.usw.apigw.tencentcs.com/v1/chat/completions",
                         lines=2,
                     )
                     changeAPIURLBtn = gr.Button("🔄 切换API地址")
@@ -446,9 +446,9 @@ if __name__ == "__main__":
     # if not running in Docker
     else:
         if authflag:
-            demo.queue().launch(share=False, auth=(username, password), favicon_path="./assets/favicon.png")
+            demo.queue().launch(server_name="0.0.0.0", server_port=7860, share=False, auth=(username, password), favicon_path="./assets/favicon.png")
         else:
-            demo.queue().launch(share=False, favicon_path="./assets/favicon.png")  # 改为 share=True 可以创建公开分享链接
+            demo.queue().launch(server_name="0.0.0.0", server_port=7860, share=False, favicon_path="./assets/favicon.png")  # 改为 share=True 可以创建公开分享链接
         # demo.queue().launch(server_name="0.0.0.0", server_port=7860, share=False) # 可自定义端口
         # demo.queue().launch(server_name="0.0.0.0", server_port=7860,auth=("在这里填写用户名", "在这里填写密码")) # 可设置用户名与密码
         # demo.queue().launch(auth=("在这里填写用户名", "在这里填写密码")) # 适合Nginx反向代理

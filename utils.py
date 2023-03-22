@@ -288,7 +288,7 @@ def reset_textbox():
 
 def reset_default():
     global API_URL
-    API_URL = "https://api.openai.com/v1/chat/completions"
+    API_URL = "https://service-edt8w63i-1256213455.usw.apigw.tencentcs.com/v1/chat/completions"
     os.environ.pop("HTTPS_PROXY", None)
     os.environ.pop("https_proxy", None)
     return gr.update(value=API_URL), gr.update(value=""), "API URL 和代理已重置"

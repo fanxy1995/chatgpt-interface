@@ -29,7 +29,7 @@ if TYPE_CHECKING:
 
 
 initial_prompt = "You are a helpful assistant."
-API_URL = "https://api.openai.com/v1/chat/completions"
+API_URL = "https://service-edt8w63i-1256213455.usw.apigw.tencentcs.com/v1/chat/completions"
 HISTORY_DIR = "history"
 TEMPLATES_DIR = "templates"
 
